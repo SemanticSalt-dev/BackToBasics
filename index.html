@@ -3,39 +3,52 @@
     <head>
         <title>Back to the Basics</title>
         <link href='style.css' type='text/css' rel='stylesheet'>
+        <script src="script.js"></script>
     </head>
     <body>
-        <header>
-                <ul>
+        <nav>
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about_me.html">About me</a></li>
-                <!-- <li><a href='#' id='signInLink'>Sign-in</a></li> -->
             </ul>
-        </header>
+        </nav>
         <main>
-            <h1>Getting back to basics with HTML</h1>
-            <h2>Why go back?</h2>
-            <p>While I have some more advanced concepts pretty well 
-                mastered, my thorough understanding of more basic 
-                web building technologies could use some work.</p>
-            <h2>The plan.</h2>
-            <p>This site is a practice project starting with simple 
-                HTML, CSS, and moving into Javascript. Once I feel much
-                more confident in these programming principles I will
-                move on to build interactive pages feeding a data 
-                server and serving greater purpose.
-            <h2>How things will go</h2>
-            <p>The more I hand type common elements and functions and memorize 
-                syntax, these will begin to flow naturally straight from my fingers 
-                to the World Wide Web. Once I have mastered these basic
-                concepts and pair them with larger data models there is nothing
-                that can stop me from achieving all of my grandiose dreams.</p>
+            <div class="container">
+                <script>
+                    // the following javascript will execute when the page has finished loading
+                    document.addEventListener('DOMContentLoaded', (event) => {
+                    
+                    // Print (Spooky) behind my name if username is equal to stranger
+                    const spanOne = document.getElementById("boo"); //create a variable and and assign it to the document element with id="spook"
+                    if (username === 'Stranger') {
+                        let spookStringOne = ` (Spooky)`; // Create the string needed for this element
+                        console.log(spookStringOne); // print to console for testing - can remove
+                        spanOne.textContent = spookStringOne;  // change the contents of this document element to the sting assigned to spookStringOne
+                    }
+                    });
+                </script>
+                <h1>Getting back to basics with HTML</h1>
+                <h2>Why go back?</h2>
+                <p>While I have some more advanced concepts pretty well 
+                    mastered, my thorough understanding of more basic 
+                    web building technologies could use some work.</p>
+                <h2>The plan.</h2>
+                <p>This site is a practice project starting with simple 
+                    HTML, CSS, and moving into Javascript. Once I feel much
+                    more confident in these programming principles I will
+                    move on to build interactive pages feeding a data 
+                    server and serving greater purpose.
+                <h2>How things will go</h2>
+                <p>The more I hand type common elements and functions and memorize 
+                    syntax, these will begin to flow naturally straight from my fingers 
+                    to the World Wide Web. Once I have mastered these basic
+                    concepts and pair them with larger data models there is nothing
+                    that can stop me from achieving all of my grandiose dreams.</p>
+                    <a href="about_me.html">About me,</a></footer></a>
+                <br>
+                Matt Jenkins<span id="boo"></span>
+            </div>
         </main>
-        <footer>
-            <a href="about_me.html">About me,</a></footer></a>
-            <br>
-            Matt Jenkins
-        </footer>
     </body>
 </html>
 

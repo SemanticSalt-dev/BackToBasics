@@ -13,47 +13,49 @@
       </ul>
     </nav>
     <main>
-      <script>
-        // the following javascript will execute when the page has finished loading
-        document.addEventListener('DOMContentLoaded', (event) => {
-          
-          // Change the main heading from being empty to 'About (var username from script.js)'
-          const headingOne = document.getElementById("aboutMe"); //create a variable and and assign it to the document element with id="aboutMe"
-          let fullStringOne = `About ${username}`; // Create the full string needed for this element
-          console.log(fullStringOne); // print to console for testing - can remove
-          headingOne.textContent = fullStringOne;  // change the contents of this document element to the sting assigned to fullStringOne
-          
-          // Change the second heading from being about me to 'Some things about (var username from script.js)'
-          const headingTwo = document.getElementById("thingsAbout");
-          let fullStringTwo = `Some things about ${username}.`;
-          console.log(fullStringTwo); // print to console for testing - can remove
-          headingTwo.textContent = fullStringTwo; 
+      <div class="container">
+        <script>
+          // the following javascript will execute when the page has finished loading
+          document.addEventListener('DOMContentLoaded', (event) => {
+            
+            // Change the main heading from being empty to 'About (var username from script.js)'
+            const headingOne = document.getElementById("aboutMe"); //create a variable and and assign it to the document element with id="aboutMe"
+            let fullStringOne = `About ${username}`; // Create the full string needed for this element
+            console.log(fullStringOne); // print to console for testing - can remove
+            headingOne.textContent = fullStringOne;  // change the contents of this document element to the sting assigned to fullStringOne
+            
+            // Change the second heading from being about me to 'Some things about (var username from script.js)'
+            const headingTwo = document.getElementById("thingsAbout");
+            let fullStringTwo = `Some things about ${username}.`;
+            console.log(fullStringTwo); // print to console for testing - can remove
+            headingTwo.textContent = fullStringTwo; 
 
-                    
-          // Change the last list item to the current spookiness level rounded down to the hundredths place
-          const listItem = document.getElementById("spookiness");
-          let spookyHundredthFloored = Math.floor(spookiness* 100) / 100;
-          let fullStringThree = `I'm ${spookyHundredthFloored.toFixed(2)}% spooky.`;
-          console.log(fullStringThree); // print to console for testing - can remove
-          listItem.textContent = fullStringThree; 
-        });
-      </script>
-      <h1 id ="aboutMe"></h1>
-      <h2 id="thingsAbout">Some things about me.</h2>
-      <ul>
-          <li>I like video games.</li>
-          <li>My life is pretty neat.</li>
-          <li>I like to build lists.</li>
-          <li>This one has no order.</li>
-          <li id="spookiness"></li>
-      </ul>
-      <h2>Things that are true.</h2>
-      <ol>
-          <li>The earth is roundish.</li>
-          <li>Two is twice as many as one.</li>
-          <li>&#8730;2 &#8800; 1</li>
-          <li>Some lists are chronological.</li>
-      </ol>
+                      
+            // Change the last list item to the current spookiness level rounded down to the hundredths place
+            const listItem = document.getElementById("spookiness");
+            let spookyHundredthFloored = Math.floor(spookiness* 100) / 100;
+            let fullStringThree = `I'm ${spookyHundredthFloored.toFixed(2)}% spooky.`;
+            console.log(fullStringThree); // print to console for testing - can remove
+            listItem.textContent = fullStringThree; 
+          });
+        </script>
+        <h1 id ="aboutMe"></h1>
+        <h2 id="thingsAbout">Some things about me.</h2>
+        <ul>
+            <li>I like video games.</li>
+            <li>My life is pretty neat.</li>
+            <li>I like to build lists.</li>
+            <li>This one has no order.</li>
+            <li id="spookiness"></li>
+        </ul>
+        <h2>Things that are true.</h2>
+        <ol>
+            <li>The earth is roundish.</li>
+            <li>Two is twice as many as one.</li>
+            <li>&#8730;2 &#8800; 1</li>
+            <li>Some lists are chronological.</li>
+        </ol>
+      </div>
     </main>
     <footer>
       <p>Get it.</p>

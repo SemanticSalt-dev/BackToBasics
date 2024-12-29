@@ -1,41 +1,57 @@
 body {
     background-color:#b3d9b4; /* Dark Pale Green */
     margin: 0;
-    padding: 40px;
+    padding: 20px;
   }
   
-  h1 {
-    font-family: Georgia;
-    color: #333; /* Dark Gray */
-    font-size: 2em;
-    width: 100%;
-  }
-  
-  h2 {
-    font-family: Georgia;
-    border-bottom: 1px solid #333; /* Dark Gray */
-    color: #333; /* Dark Gray */
-    font-weight: 100;
-    font-size: 22px;
-    line-height: 24px;
-    padding-bottom: 30px;
-    text-align: left;
-    width: 70%;
-  }
-  
-  p, ul, ol, footer{
-    font-family: Helvetica;
-    color: #555; /* Gray */
-    line-height: 1.3em;
-    text-align: left;
-    width: 100%;
-  }
+h1 {
+  font-family: Georgia;
+  color: #333; /* Dark Gray */
+  font-size: 2em;
+  width: 100%;
+}
 
-  a {
-    color: #00401a; /* Darker Green */
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #001a08; /* Darker Green for Hover */
-  }
+h2 {
+  font-family: Georgia;
+  border-bottom: 1px solid #333; /* Dark Gray */
+  color: #333; /* Dark Gray */
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 24px;
+  padding-bottom: 30px;
+  text-align: left;
+  width: 70%;
+}
+
+p, ul, ol, footer{
+  font-family: Helvetica;
+  color: #555; /* Gray */
+  line-height: 1.3em;
+  text-align: left;
+}
+
+a {
+  color: #00401a; /* Darker Green */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #001a08; /* Darker Green for Hover */
+}
+
+.container {
+  width: 95%; 
+  margin: 0 auto; 
+  padding: 25px; 
+}
+
+nav ul { 
+  list-style: none; /* Remove bullet points */
+  margin: 0;       /* Remove margins */
+  padding: 0;      /* Remove padding */
+}
+
+nav li {
+  display: inline-block; /* Make list items display inline */
+  margin-right: 20px;   /* Add space between items (adjust as needed) */
+}
