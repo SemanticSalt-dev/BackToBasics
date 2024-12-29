@@ -22,13 +22,20 @@
           let fullStringOne = `About ${username}`; // Create the full string needed for this element
           console.log(fullStringOne); // print to console for testing - can remove
           headingOne.textContent = fullStringOne;  // change the contents of this document element to the sting assigned to fullStringOne
-
           
           // Change the second heading from being about me to 'Some things about (var username from script.js)'
           const headingTwo = document.getElementById("thingsAbout");
           let fullStringTwo = `Some things about ${username}.`;
           console.log(fullStringTwo); // print to console for testing - can remove
           headingTwo.textContent = fullStringTwo; 
+
+                    
+          // Change the last list item to the current spookiness level rounded down to the hundredths place
+          const listItem = document.getElementById("spookiness");
+          let spookyHundredthFloored = Math.floor(spookiness* 100) / 100;
+          let fullStringThree = `I'm ${spookyHundredthFloored.toFixed(2)}% spooky.`;
+          console.log(fullStringThree); // print to console for testing - can remove
+          listItem.textContent = fullStringThree; 
         });
       </script>
       <h1 id ="aboutMe"></h1>
@@ -38,6 +45,7 @@
           <li>My life is pretty neat.</li>
           <li>I like to build lists.</li>
           <li>This one has no order.</li>
+          <li id="spookiness"></li>
       </ul>
       <h2>Things that are true.</h2>
       <ol>

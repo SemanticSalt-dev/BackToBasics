@@ -1,5 +1,10 @@
-// Code will be added to check if the user is logged in and assign the 
-let defaultName = 'Me';
-let username = defaultName || 'Stranger'; // If username is not empty, assign defaultName to 'Stranger' to stranger, otherwise username to defaultName
+// Assign a random number to spookiness
+let spookiness = Math.random() *  100;
+
+// if spookiness is less than 28 then assign 'Matt', other wise if less than 71 assign 'Me', otherwise assign a blank string
+let defaultName = spookiness < 28 ? 'Matt' : (spookiness < 71 ? 'Me' : '');
+
+// If defaultName is empty, assign as 'Stranger', otherwise defaultName to username
+let username = defaultName || 'Stranger'; 
 
 
