@@ -1,76 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Back to the Basics</title>
-        <link href='style.css' rel='stylesheet'>
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_me.html">About me</a></li>
-                <!-- <li><a href='#' id='signInLink'>Sign-in</a></li> -->
-            </ul>
-        </nav>
-        <!-- <div id="signInModal" class="modal">
-            <div class="modal-content">
-              <span class="close-button">&times;</span>
-              <form id="signInForm" method="post" action="login.php">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="email" required><br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required><br><br>
-                <input type="submit" value="Sign In">
-              </form>
-            </div>
-        </div>
-        <script>
-            // Get the modal
-            var modal = document.getElementById("signInModal");
-            
-            // Get the button that opens the modal
-            var btn = document.getElementById("signInLink");
-            
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close-button")[0];
-            
-            // When the user clicks the button, open the modal 
-            btn.onclick = function() {
-              modal.style.display = "block";
-            }
-            
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-              modal.style.display = "none";
-            }
-            
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-              if (event.target == modal) {
-                modal.style.display = "none";
-              }
-            }
-        </script> -->
-        <main>
-            <!-- <h1>Welcome, <?php echo $_SESSION["username"]; ?>!</h1> -->
-            <h1>About me</h1>
-            <h2>Some things about me.</h2>
-            <ul>
-                <li>I like video games.</li>
-                <li>My life is pretty neat.</li>
-                <li>I like to build lists.</li>
-                <li>This one has no order.</li>
-            </ul>
-            <h2>Things that are true.</h2>
-            <ol>
-                <li>The earth is round.</li>
-                <li>Two is twice as many as one.</li>
-                <li>&#8730;2 &#8800; 1</li>
-                <li>Some lists are chronological.</li>
-            </ol>
-        </main>
-        <footer>
-            </footer></a>
-        </footer>
-    </body>
+  <head>
+    <title>Back to the Basics</title>
+    <link href='style.css' rel='stylesheet'>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_me.html">About me</a></li>
+      </ul>
+    </nav>
+    <main>
+      <script>
+        // the following javascript will execute when the page has finished loading
+        document.addEventListener('DOMContentLoaded', (event) => {
+          
+          // Change the main heading from being empty to 'About (var username from script.js)'
+          const headingOne = document.getElementById("aboutMe"); //create a variable and and assign it to the document element with id="aboutMe"
+          let fullStringOne = `About ${username}`; // Create the full string needed for this element
+          console.log(fullStringOne); // print to console for testing - can remove
+          headingOne.textContent = fullStringOne;  // change the contents of this document element to the sting assigned to fullStringOne
+
+          
+          // Change the second heading from being about me to 'Some things about (var username from script.js)'
+          const headingTwo = document.getElementById("thingsAbout");
+          let fullStringTwo = `Some things about ${username}.`;
+          console.log(fullStringTwo); // print to console for testing - can remove
+          headingTwo.textContent = fullStringTwo; 
+        });
+      </script>
+      <h1 id ="aboutMe"></h1>
+      <h2 id="thingsAbout">Some things about me.</h2>
+      <ul>
+          <li>I like video games.</li>
+          <li>My life is pretty neat.</li>
+          <li>I like to build lists.</li>
+          <li>This one has no order.</li>
+      </ul>
+      <h2>Things that are true.</h2>
+      <ol>
+          <li>The earth is roundish.</li>
+          <li>Two is twice as many as one.</li>
+          <li>&#8730;2 &#8800; 1</li>
+          <li>Some lists are chronological.</li>
+      </ol>
+    </main>
+    <footer>
+      <p>Get it.</p>
+    </footer>
+  </body>
 </html>
