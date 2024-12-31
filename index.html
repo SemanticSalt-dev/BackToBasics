@@ -16,15 +16,9 @@
             <div class="container">
                 <script>
                     // the following javascript will execute when the page has finished loading
-                    document.addEventListener('DOMContentLoaded', (event) => {
-                    
-                    // Print (Spooky) behind my name if username is equal to stranger
-                    const spanOne = document.getElementById("boo"); //create a variable and and assign it to the document element with id="spook"
-                    if (username === 'Stranger') {
-                        let spookStringOne = ` (Spooky)`; // Create the string needed for this element
-                        console.log(spookStringOne); // print to console for testing - can remove
-                        spanOne.textContent = spookStringOne;  // change the contents of this document element to the sting assigned to spookStringOne
-                    }
+                    document.addEventListener('DOMContentLoaded', (event) => {                    
+                        // Print (Spooky) behind my name if username is equal to stranger
+                        booSpan("boo");
                     });
                 </script>
                 <h1>Getting back to basics with HTML</h1>
