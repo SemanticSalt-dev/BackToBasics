@@ -14,20 +14,6 @@
     </nav>
     <main>
       <div class="container">
-        <script>
-          // this script will execute when the page has finished loading
-          document.addEventListener('DOMContentLoaded', (event) => {
-            
-            // Change the main heading from being empty to 'About (var username from script.js)'
-            updateAboutMe("aboutMe");
-
-            // Change the second heading from being about me to 'Some things about (var username from script.js)'
-            updateThingsAbout("thingsAbout")
-
-            // Change the last list item to the current spookiness level rounded down to the hundredths place
-            updateSpookiness("spookPercent");
-          });
-        </script>
         <h1 id ="aboutMe"></h1>
         <h2 id="thingsAbout">Some things about me.</h2>
         <ul>
@@ -49,5 +35,19 @@
     <footer>
       <p>Get it.</p>
     </footer>
+    <script>
+      // this script will execute when the page has finished loading
+      document.addEventListener('DOMContentLoaded', (event) => {
+        
+        // Change the main heading from being empty to 'About (var username from script.js)'
+        updateAboutMe("aboutMe");
+  
+        // Change the second heading from being about me to 'Some things about (var username from script.js)'
+        updateThingsAbout("thingsAbout")
+  
+        // Change the last list item to the current spookiness level rounded down to the hundredths place
+        updateSpookiness("spookPercent");
+      });
+    </script>
   </body>
 </html>
