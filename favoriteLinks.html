@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Favorite Links</title>
+    <link href='resources/style/style.css' rel='stylesheet'>
+    <script src="resources/scripts/script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutMe.html">About me</a></li>
+        <li><a href="favoriteLinks.html">Favorite Links</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <h1>Some of my favorite links.</h1>
+        <h2 id="links">These are programming related.</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs - read friendly for HTML CSS and JS</a></li>
+            <li><a href="https://www.w3.org/TR/CSS2/selector.html">W3 Documentation - the actual documentation to know every detail</a></li>
+            <li><a href="https://css-tricks.com/">CSS Tricks - maybe you learn something here</a></li>
+            <li><a href="https://codecademy.com/">Codecademy - keep learning forever and always</a></li>
+        </ul>
+        <h2 id="links">These are spiritual.</h2>
+        <ul>
+            <li><a href="https://gemini.google.com/">Google Gemini - your favorite ai assistant</a></li>
+            <li><a href="https://keep.google.com/">Google Keep - for note taking</a></li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <p>Keep getting it.</p>
+    </footer>
+    <script>
+      // this script will execute when the page has finished loading
+      document.addEventListener('DOMContentLoaded', (event) => {
+  
+        // Change the second heading from being about me to 'Some things about (var username from script.js)'
+        updateThingsAbout("thingsAbout")
+  
+        // Change the last list item to the current spookiness level rounded down to the hundredths place
+        updateSpookiness("spookPercent");
+      });
+    </script>
+  </body>
+</html>
