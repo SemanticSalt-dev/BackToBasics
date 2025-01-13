@@ -35,19 +35,24 @@ let speciesArray = [ {speciesName:'shark', numTeeth:50},
 const bubbleSortSpeciesByTeeth = arr => {
     let len = arr.length;
     let swapped;
+    logicalStep = 0;
     do {
         swapped = false; // reset swap flag each pass
         for (let i = 0; i < len - 1; i++) { // iterate through array
-            if(arr[i].numTeeth > arr[i + 1].numTeeth) { // if this is greater than that next one in the array - swap them - this and that
-                const logHelper = i + 1;
-                console.log(`im switching elements ${i} and ${logHelper}`);
+            logicalStep++;
+            console.log(`im comparing elements #${i} and #${(i + 1)} - Logical step ${logicalStep}`); 
+            if(arr[i].numTeeth > arr[i + 1].numTeeth) { // if this one is greater than that next one in the array - swap them - this and that
+                logicalStep++;
+                const logHelper = i + 1; // define a variable for the next item in the array
+                console.log(`im switching elements #${i} and #${logHelper} - Logical step ${logicalStep}`); 
                 let tempArrItem =  arr[i]; // assign a temporary holder for this
                 arr[i] = arr[i + 1]; // assign the value of that to this
                 arr[i + 1] = tempArrItem; // what was this is now assigned to that
                 swapped = true; // set swap to true to repeat the cycle if any changes were found in pass through
             }
-        console.log('new loop');
+        
         }
+        if (swapped) {console.log('new loop');};
     } while (swapped); // continue as long as changes were made
     return arr; // return the sorted array
 }
@@ -62,12 +67,16 @@ speciesArray = [ {speciesName:'shark', numTeeth:2},
                     {speciesName:'human', numTeeth:921}];
 
 function insertionSortSpeciesByTeeth(arr) {
+    logicalStep = 0;
     for (let i = 1; i < arr.length; i++) { // iterate starting at the second element
+        logicalStep++;
+        console.log(`im comparing elements #${(i - 1)} and #${i} - Logical step ${logicalStep}`); 
         let key = arr[i]; // store current element as the 'key'
         let j = i - 1; // initialize a pointer to the element before this one
             while (j >= 0 && arr[j].numTeeth < key.numTeeth) { // while the element before is greater than its predecessor
+                logicalStep++;
                 const logHelper = j + 1;
-                console.log(`im switching elements ${j} and ${logHelper}`);
+                console.log(`im switching elements ${j} and ${logHelper} - Logical step ${logicalStep}`);
                 arr[j + 1] = arr[j]; // assign the before element with value of the after element
                 j = j - 1; //move j pointer one to the left
             }
@@ -91,8 +100,10 @@ function selectionSortSpeciesByTeeth(arr) {
         console.log('from the top');
         let minIndex = i; // Assume the index to the left is the minimum value
         for (let j = i + 1; j < arr.length; j++) { // search through and find the index of actual minimum value
+            console.log(`im searching j[${j}]`);
             if (arr[j].numTeeth < arr[minIndex].numTeeth) { // if the element to the right less than the minimum value currently found
                 minIndex = j; // update index of minimum value with the found index
+                console.log(`im updating minIndex to j[${j}]`);
             }
         }
         if (minIndex !== i) { // if the minimum value index is lower than the current index
