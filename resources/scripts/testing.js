@@ -33,33 +33,49 @@ let speciesArray = [ {speciesName:'shark', numTeeth:50},
 // Bubble Sort
 
 const bubbleSortSpeciesByTeeth = arr => {
+    // declare variables
     let len = arr.length;
     let swapped;
     logicalStep = 0;
+    loopCounter = 0;
+    swapCounter = 0;
+    comparisonCounter = 0;
+    computerStepCounter = 0;
+    // repeat the loop 
     do {
+        loopCounter++;
+        computerStepCounter++;
         swapped = false; // reset swap flag each pass
         for (let i = 0; i < len - 1; i++) { // iterate through array
+            comparisonCounter += 2;
+            computerStepCounter += 2;
             logicalStep++;
             console.log(`im comparing elements #${i} and #${(i + 1)} - Logical step ${logicalStep}`); 
             if(arr[i].numTeeth > arr[i + 1].numTeeth) { // if this one is greater than that next one in the array - swap them - this and that
                 logicalStep++;
+                swapCounter++;
                 const logHelper = i + 1; // define a variable for the next item in the array
                 console.log(`im switching elements #${i} and #${logHelper} - Logical step ${logicalStep}`); 
                 let tempArrItem =  arr[i]; // assign a temporary holder for this
                 arr[i] = arr[i + 1]; // assign the value of that to this
                 arr[i + 1] = tempArrItem; // what was this is now assigned to that
                 swapped = true; // set swap to true to repeat the cycle if any changes were found in pass through
+                computerStepCounter += 3; // add 3 computer steps for a swap;
             }
         
         }
         if (swapped) {console.log('new loop');};
     } while (swapped); // continue as long as changes were made
+    console.log("Loop Counter:", loopCounter);
+    console.log("Swap Counter:", swapCounter);
+    console.log("Comparison Counter:", comparisonCounter);
+    console.log("Computer Step Counter:", computerStepCounter);
     return arr; // return the sorted array
 }
 
 console.log(bubbleSortSpeciesByTeeth(speciesArray));
 
-// again
+// Insertion sort
 
 speciesArray = [ {speciesName:'shark', numTeeth:2}, 
                     {speciesName:'dog', numTeeth:460}, 
@@ -89,6 +105,8 @@ function insertionSortSpeciesByTeeth(arr) {
 }
 
 console.log(insertionSortSpeciesByTeeth(speciesArray));
+
+// Selection Sort
 
 speciesArray = [ {speciesName:'shark', numTeeth:1400}, 
                     {speciesName:'dog', numTeeth:11}, 
